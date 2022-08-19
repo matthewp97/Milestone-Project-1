@@ -9,19 +9,15 @@
 </head>
 <body>
     <div id="user-funds">Credits: 2000</div>
+    <div id="loss" style="display:none">Try again!</div>
+    <div id="win" style="display:none">You win!</div>
     <div class="slot-machine">
-        <div id="window1">
-            <img class="cherries" src="assets/cherries.png" alt="cherries">
-        </div>
-        <div id="window2">
-            <img class="bell" src="assets/bell.png" alt="bell">
-        </div>
-        <div id="window3">
-            <img class="seven" src="assets/seven.png" alt="seven">
-        </div>
+        <img id="window1" src="assets/cherries.png" alt="cherries">
+        <img id="window2" src="assets/bell.png" alt="bell">
+        <img id="window3" src="assets/seven.png" alt="seven">
     </div>
     <div class="button">
-        <button onclick="spin()">Good luck!</button>
+        <button id="button" onclick="spin()">Good luck!</button>
     </div>
 
     <script src="scripts.js"></script>

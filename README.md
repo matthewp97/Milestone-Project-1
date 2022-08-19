@@ -1,6 +1,6 @@
 # Milestone-Project-1
 
--Add Images
+-Images shuffle on click
 -Add animations
 -Show win/lose on screen
 -Stop at zero
