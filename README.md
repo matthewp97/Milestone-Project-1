@@ -1,8 +1,8 @@
-# Milestone-Project-1
+# Milestone-Project-1 Ideas
 
--Images shuffle on click
 -Add animations
--Show win/lose on screen
--Stop at zero
+-Border moves when win/lose pop up
+-Make add credit function/button
+-Certain combos win more
 
 -maybe add sounds?

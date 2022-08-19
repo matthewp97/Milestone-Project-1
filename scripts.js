@@ -4,7 +4,8 @@
 
 let loss = document.getElementById("loss");
 let win = document.getElementById("win");
-let button = document.getElementById("button");
+let addCredits = document.getElementById("add-credits");
+let spinButton = document.getElementById("spin-button");
 let window1 = document.getElementById("window1");
 let window2 = document.getElementById("window2");
 let window3 = document.getElementById("window3");
@@ -20,6 +21,7 @@ function spin() {
     document.getElementById("user-funds").textContent = "Credits: " + user.funds;
     checkForWin()
     console.log(user.funds);
+    lowFunds();
 }
 
 function checkForWin() {
@@ -32,7 +34,25 @@ function checkForWin() {
         document.getElementById("user-funds").textContent = "Credits: " + user.funds;
     } else if (user.funds <= 0 ){
         loss.style = "display:flex"
-        button.disabled = true
+        spinButton.disabled = true
         console.log("Try again!");
+        addCredits.style.display = "inline-block";
     }
+}
+
+function lowFunds() {
+    if(
+        user.funds <= 500
+    ){
+        document.getElementById("user-funds").style.color = "red";
+    }
+}
+
+function addMoreCredits() {
+    user.funds = 2000
+    document.getElementById("user-funds").textContent = "Credits: " + user.funds;
+    addCredits.style.display = "none";
+    spinButton.disabled = false;
+    loss.style.display = "none";
+    document.getElementById("user-funds").style.color = "white";
 }

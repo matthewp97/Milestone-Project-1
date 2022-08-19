@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <title>Slot Machine</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+    </style> 
 </head>
 <body>
     <div id="user-funds">Credits: 2000</div>
@@ -17,7 +20,8 @@
         <img id="window3" src="assets/seven.png" alt="seven">
     </div>
     <div class="button">
-        <button id="button" onclick="spin()">Good luck!</button>
+        <button id="spin-button" onclick="spin()">Good luck!</button>
+        <button id="add-credits" onclick="addMoreCredits()" style="display:none">Add More Credits!</button>
     </div>
 
     <script src="scripts.js"></script>
