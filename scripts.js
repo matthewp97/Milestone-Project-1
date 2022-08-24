@@ -57,7 +57,7 @@ function addMoreCredits() {
     rollingNumber(2000)
 }
 
-function rollingNumber(end, direction) {
+function rollingNumber(end) {
     spinButton.disabled = true;
     let numberRoll = setInterval(
         function() {
