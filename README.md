@@ -1,7 +1,5 @@
 # Milestone-Project-1 Ideas
 
--Change cherry
--Separate word "Credits" from credit amount
 -Add click effect to sping button
 -Add animations
     -Animate images
