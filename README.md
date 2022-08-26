@@ -1,9 +1,7 @@
 # Milestone-Project-1 Ideas
 
--Add animations
-    -Animate images
-    -Credit word
--Find good placement for win/lose notification
--Certain combos win more
+Slot machine!
 
--maybe add sounds?
+First project that I've ever created using JavaScript, might continue to work on it in the future to add some more features and whatnot, but I'm very proud of it as of this eleventh commit :)
+
+Good luck and have fun!
