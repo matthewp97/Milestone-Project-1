@@ -1,6 +1,6 @@
  let user = {
     funds: 2000
-}
+};
 
 let userFunds = document.getElementById("user-funds");
 let loss = document.getElementById("loss");
@@ -15,9 +15,9 @@ let slotMachine = ["assets/bell.png", "assets/cherries.png", "assets/seven.png"]
 
 function spin() {
     spinButton.disabled = true;
-    window1.src = "assets/slot-roll1.gif"
-    window2.src = "assets/slot-roll2.gif"
-    window3.src = "assets/slot-roll3.gif"
+    window1.src = "assets/slot-roll1.gif";
+    window2.src = "assets/slot-roll2.gif";
+    window3.src = "assets/slot-roll3.gif";
     setTimeout(function() {
         user.funds -= 100;
         win.style = "display:none"
@@ -27,8 +27,8 @@ function spin() {
         userFunds.textContent = user.funds;
         checkForWin();
         console.log(user.funds);
+        lowFunds();
     }, 2000);
-    lowFunds();
 }
 
 function checkForWin() {
@@ -53,16 +53,17 @@ function lowFunds() {
         user.funds <= 500
     ){
         userFunds.style.color = "red";
+    } else {
+        userFunds.style.color = "white";
     }
 }
 
 function addMoreCredits() {
-    // userFunds.textContent = user.funds;
     addCredits.style.display = "none";
     spinButton.disabled = false;
     loss.style.display = "none";
     userFunds.style.color = "white";
-    rollingNumber(2000)
+    rollingNumber(2000);
 }
 
 function rollingNumber(end) {
@@ -77,7 +78,7 @@ function rollingNumber(end) {
                 } else {
                     user.funds += 5
                     userFunds.textContent = user.funds
-                    console.log(userFunds.textContent)
+                    console.log(userFunds.textContent);
                 }
         }, 10
     )
