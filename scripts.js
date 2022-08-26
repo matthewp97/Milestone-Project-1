@@ -14,14 +14,20 @@ let window3 = document.getElementById("window3");
 let slotMachine = ["assets/bell.png", "assets/cherries.png", "assets/seven.png"];
 
 function spin() {
-    user.funds -= 100;
-    win.style = "display:none"
-    window1.src = slotMachine[Math.floor(Math.random() * 3)]; 
-    window2.src = slotMachine[Math.floor(Math.random() * 3)];
-    window3.src = slotMachine[Math.floor(Math.random() * 3)];  
-    userFunds.textContent = user.funds;
-    checkForWin();
-    console.log(user.funds);
+    spinButton.disabled = true;
+    window1.src = "assets/slot-roll1.gif"
+    window2.src = "assets/slot-roll2.gif"
+    window3.src = "assets/slot-roll3.gif"
+    setTimeout(function() {
+        user.funds -= 100;
+        win.style = "display:none"
+        window1.src = slotMachine[Math.floor(Math.random() * 3)]; 
+        window2.src = slotMachine[Math.floor(Math.random() * 3)];
+        window3.src = slotMachine[Math.floor(Math.random() * 3)];  
+        userFunds.textContent = user.funds;
+        checkForWin();
+        console.log(user.funds);
+    }, 2000);
     lowFunds();
 }
 
@@ -37,6 +43,8 @@ function checkForWin() {
         spinButton.disabled = true;
         console.log("Try again!");
         addCredits.style.display = "inline-block";
+    } else {
+        spinButton.disabled = false;
     }
 }
 
@@ -74,3 +82,4 @@ function rollingNumber(end) {
         }, 10
     )
 }
+

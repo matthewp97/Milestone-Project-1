@@ -3,7 +3,12 @@ body {
     text-align: center;
     color: aliceblue;
     width: 100vw;
-    background-color: darkslateblue;
+    height: 100vh;
+    background-image: linear-gradient(
+        0deg,
+      #3c096c 0%,
+      #9d4edd 100%
+        );
 }
 
 /* Slot machine */
@@ -12,7 +17,7 @@ body {
     justify-content: space-evenly;
     margin: 0 auto;
     width: 800px;
-    margin-top: 7.5%;
+    margin-top: 150px;
     flex-direction: row;
     border: 10px solid darkturquoise;
 }
@@ -47,26 +52,25 @@ img {
     color: aqua;
     font-size: 94px;
     margin-left: 590px;
-    margin-top: 4px;
+    margin-top: 20px;
     position: absolute;
     text-transform: uppercase;
     background-image: linear-gradient(
       -225deg,
       #fff75e 0%,
-      #ffe94e 25%,
-      #ffda3d 50%,
-      #e4b61a 75%,
-      #fdc43f 100%
+      #ffe246 25%,
+      #ffd53e 50%,
+      #fdc43f 75%,
+      #fdb833 100%
     );
     background-size: auto auto;
     background-clip: border-box;
     background-size: 200% auto;
     color: #fff;
     background-clip: text;
-    text-fill-color: transparent;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    animation: textclip 2s linear infinite;
+    animation: textclip 1.8s linear infinite;
   }
   
   @keyframes textclip {
@@ -80,7 +84,7 @@ img {
   color: aqua;
   font-size: 94px;
   margin-left: 550px;
-  margin-top: 4px;
+  margin-top: 20px;
   position: absolute;
   text-transform: uppercase;
   background-image: linear-gradient(
@@ -95,10 +99,9 @@ img {
   background-size: 200% auto;
   color: #fff;
   background-clip: text;
-  text-fill-color: transparent;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: textclip 2s linear infinite;
+  animation: textclip 1.8s linear infinite;
 }
 
 @keyframes textclip {
@@ -106,48 +109,6 @@ img {
     background-position: 200% center;
   }
 }
-
-/* Button */
-/* button{
-    font-family: 'Bebas Neue', sans-serif;
-    padding:6px 12px;
-    border:none;
-    background-color: #212121;
-    color:#fff;
-    font-size:50px;
-    position: relative;
-    opacity: 1;
-    margin-top: 45px;
-  }
-  button::after{
-    content:"";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin:auto;
-    transform:scale(1);
-    background-color: rgba(0,0,0,0.8);
-    opacity:1;
-    transition:all ease 0.5s;
-    z-index:-1;
-  }
-  button:hover::after{
-    animation:grow 0.5s ease;
-  }
-
-  @keyframes grow
-  {
-    0%{
-      transform:scale(1);
-      opacity:1;
-    }
-    100%{
-      transform:scale(1.2);
-      opacity:0;
-    }
-  } */
 
   button:disabled {
     background-color: gray;
@@ -168,7 +129,7 @@ button{
   font-size:50px;
   position: relative;
   opacity: 1;
-  margin-top: 45px;
+  margin-top: 35px;
   cursor: pointer;
   transition-duration: 0.4s;
   -webkit-transition-duration: 0.4s; /* Safari */
